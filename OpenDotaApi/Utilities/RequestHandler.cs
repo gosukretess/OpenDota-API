@@ -26,7 +26,7 @@ namespace OpenDotaApi.Utilities
             }
         }
 
-        public int? CurrentLimitMonth { get; private set; }
+        public int? CurrentLimitDay { get; private set; }
         public int? CurrentLimitMinute { get; private set; }
         public string ApiKey { get; set; }
 
@@ -145,7 +145,7 @@ namespace OpenDotaApi.Utilities
 
         private void GetCurrentLimit(HttpHeaders headers)
         {
-            CurrentLimitMonth = int.Parse(headers.GetValues("x-rate-limit-remaining-month").First());
+            CurrentLimitDay = int.Parse(headers.GetValues("X-Rate-Limit-Remaining-Day").First());
             CurrentLimitMinute = int.Parse(headers.GetValues("x-rate-limit-remaining-minute").First());
             LastDateRequest = DateTime.Parse(headers.GetValues("Date").First());
         }

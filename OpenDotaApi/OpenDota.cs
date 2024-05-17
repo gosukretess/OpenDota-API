@@ -106,9 +106,9 @@ namespace OpenDotaApi
             return _request.CurrentLimitMinute;
         }
 
-        public int? GetCurrentLimitMonth()
+        public int? GetCurrentLimitDay()
         {
-            return _request.CurrentLimitMonth;
+            return _request.CurrentLimitDay;
         }
 
         public void Dispose()
