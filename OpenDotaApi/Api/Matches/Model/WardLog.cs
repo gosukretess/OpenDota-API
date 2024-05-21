@@ -29,12 +29,12 @@ namespace OpenDotaApi.Api.Matches.Model
         public string Type { get; set; }
 
         [JsonPropertyName("x")]
-        public long? X { get; set; }
+        public float? X { get; set; }
 
         [JsonPropertyName("y")]
-        public long? Y { get; set; }
+        public float? Y { get; set; }
 
         [JsonPropertyName("z")]
-        public long? Z { get; set; }
+        public float? Z { get; set; }
     }
 }
